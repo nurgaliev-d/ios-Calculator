@@ -21,26 +21,26 @@ class ViewController: UIViewController {
     @IBAction func plus(_ sender: Any) {
         let a = textfield1.text!
         let b = textfield2.text!
-        let result = Int(a)! + Int(b)!
+        let result = (Int(a) ?? 0) + (Int(b) ?? 0)
         label.text = "Result is: \(result)"
     }
     @IBAction func minus(_ sender: Any) {
         let a = textfield1.text!
         let b = textfield2.text!
-        let result = Int(a)! - Int(b)!
+        let result = (Int(a) ?? 0) - (Int(b) ?? 0)
         label.text = "Result is: \(result)"
     }
     @IBAction func multiply(_ sender: Any) {
         let a = textfield1.text!
         let b = textfield2.text!
-        let result = Int(a)! * Int(b)!
+        let result = (Int(a) ?? 0) * (Int(b) ?? 0)
         label.text = "Result is: \(result)"
     }
     
     @IBAction func divide(_ sender: Any) {
         let a = textfield1.text!
         let b = textfield2.text!
-        let result = Double(a)! / Double(b)!
+        let result = (Double(a) ?? 0) / (Double(b) ?? 0)
         label.text = "Result is: \(result)"
     }
 }
